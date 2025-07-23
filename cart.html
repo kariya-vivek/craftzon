@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your CraftZon Cart is Empty</title>
+    <style>
+        /* Basic Reset & Font */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif; /* Using Inter as per instructions */
+            line-height: 1.6;
+            background-color: #F8F8F8; /* Soft Off-White Background */
+            color: #333333; /* Dark Gray Text */
+            font-size: 16px; /* Base font size */
+            display: flex; /* Use flexbox for centering content */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            min-height: 100vh; /* Full viewport height */
+            text-align: center; /* Center text within the container */
+        }
+
+        /* Cart Container */
+        .cart-container {
+            max-width: 500px; /* Max width for the cart content */
+            width: 90%; /* Responsive width */
+            padding: 2em;
+            background-color: #FFFFFF; /* White background for the cart box */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+            border-radius: 12px; /* More rounded corners for the cart */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center items vertically within the cart */
+            gap: 1.5em; /* Space between elements */
+        }
+
+        /* Empty Cart Icon/Design */
+        .empty-cart-icon {
+            /* Using an SVG for a scalable, customizable icon */
+            width: 80px;
+            height: 80px;
+            color: #D2B48C; /* Tan - Secondary Accent Color */
+            /* A simple shopping bag/cart icon SVG */
+        }
+        .empty-cart-icon svg {
+            width: 100%;
+            height: 100%;
+            fill: currentColor; /* Use the color defined above */
+        }
+
+        h1 {
+            color: #A0522D; /* Sienna - Primary Brand Color */
+            font-size: 1.8em;
+            margin: 0; /* Remove default margin */
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #555555;
+            margin: 0; /* Remove default margin */
+        }
+
+        /* Link for deals */
+        .deals-link {
+            color: #4682B4; /* Steel Blue - Link Color */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            padding: 0.5em 1em; /* Add some padding to make it more clickable */
+            border-radius: 25px; /* Fully rounded corners for the link */
+            border: 1px solid #4682B4; /* Border matching link color */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .deals-link:hover {
+            background-color: #4682B4;
+            color: #FFFFFF;
+        }
+
+        /* Continue Shopping Button */
+        .continue-shopping-button {
+            background-color: #A0522D; /* Sienna - Primary Brand Color */
+            color: #FFFFFF; /* White text */
+            padding: 1em 2em;
+            border: none;
+            border-radius: 50px; /* Fully rounded corners */
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-decoration: none; /* In case it's an <a> tag styled as a button */
+            display: inline-block; /* Allows padding and width for <a> */
+            width: fit-content; /* Adjusts width to content */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        .continue-shopping-button:hover {
+            background-color: #8B4513; /* Slightly darker Sienna on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .cart-container {
+                padding: 1.5em;
+                width: 95%; /* Wider on smaller screens */
+            }
+
+            h1 {
+                font-size: 1.6em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .continue-shopping-button {
+                padding: 0.8em 1.5em;
+                font-size: 1.1em;
+            }
+
+            .deals-link {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cart-container {
+                padding: 1em;
+                border-radius: 8px; /* Less rounded on very small screens */
+                box-shadow: none; /* Remove shadow on very small screens */
+            }
+
+            .empty-cart-icon {
+                width: 60px;
+                height: 60px;
+            }
+
+            h1 {
+                font-size: 1.4em;
+            }
+
+            p {
+                font-size: 0.9em;
+            }
+
+            .continue-shopping-button {
+                padding: 0.7em 1.2em;
+                font-size: 1em;
+            }
+
+            .deals-link {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cart-container">
+        <div class="empty-cart-icon">
+            <!-- Simple shopping bag icon SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M7 4V3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v1h3a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h3zm2-1v1h6V3H9zm9 3H4v13h16V6h-2zM9 9a1 1 0 0 1 1 1v4a1 1 0 0 1-2 0v-4a1 1 0 0 1 1-1zm6 0a1 1 0 0 1 1 1v4a1 1 0 0 1-2 0v-4a1 1 0 0 1 1-1z"/>
+            </svg>
+        </div>
+        <h1>Your CraftZon Cart is Empty</h1>
+        <p>Nothing in here. Only possibilities!</p>
+
+        <a href="#" class="deals-link">Shop Today's Deals</a>
+
+        <button class="continue-shopping-button">Continue Shopping</button>
+    </div>
+</body>
+</html>
